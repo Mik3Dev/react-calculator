@@ -6,6 +6,7 @@ const Display = ({value}) => {
         <input
             value={value}
             className="display"
+            disabled
         />
     );
 }

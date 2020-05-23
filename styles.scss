@@ -1,7 +1,7 @@
-$primary-color: rgb(65, 93, 172);
+$primary-color: rgb(77, 110, 201);
 $primary-font-color: rgb(212, 212, 212);
 
-$secondary-color: rgb(220, 220, 220);
+$secondary-color: rgb(230, 230, 230);
 $secondary-font-color: $primary-color;
 
 $danger-color: rgb(192, 38, 38);
@@ -68,7 +68,7 @@ $font-color: rgb(80, 80, 80);
     .calc {
         display:flex;
         flex-direction: column;
-        width: 500px;
+        width: 450px;
         border: $primary-font-color solid 1px;
         border-radius: 5px;
         padding:10px;
