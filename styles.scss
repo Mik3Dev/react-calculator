@@ -37,3 +37,12 @@ $font-color: rgb(80, 80, 80);
         font-weight: 600;
     }
 }
+
+.display {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: $font-color;
+    padding: 15px 10px;
+    border: none;
+    text-align: right;
+}
