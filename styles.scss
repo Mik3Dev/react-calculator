@@ -1,0 +1,39 @@
+$primary-color: rgb(65, 93, 172);
+$primary-font-color: rgb(212, 212, 212);
+
+$secondary-color: rgb(220, 220, 220);
+$secondary-font-color: $primary-color;
+
+$bg-color: rgb(250, 250, 250);
+$font-color: rgb(80, 80, 80);
+
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: $bg-color;
+    border: none;
+    color: $font-color;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 100;
+
+    &.btn-primary {
+        background-color: $primary-color;
+        color: $primary-font-color;
+        border: none;
+        font-weight: 600;
+    }
+
+    &.btn-secondary {
+        background-color: $secondary-color;
+        color: $secondary-font-color;
+        border: none;
+        font-weight: 600;
+    }
+}
