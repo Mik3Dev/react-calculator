@@ -17,10 +17,17 @@ export default function About() {
                     This project has been developed with React and NextJs by <a href="mailto:miguel.acosta1978@gmail.com">Miguel Acosta</a>. You can access the source code in <a href="https://github.com/Mik3Dev/react-calculator" target="blank">Github</a>.
                 </p>
             </div>
+            <div className="text-box">
+                <p>
+                The react calculator project has three components, the Calculator, Display and Button components. The function of the Display component is to render the inputs of the user and the results. The function of the Button component is to handle the input from the user.
+The idea behind the app is to generate a algebraic expression in the showed in the Display component to be evaluated with the mathjs library.
+                </p>
+            </div>
             <div className="flex justify-around">
                 <img src="/react.svg" alt="react logo" className="image"/>
                 <img src="/nextjs.png" alt="next logo" className="image"/>
             </div>
+            
 
             <div className="flex justify-center">
                 <Link href="/">

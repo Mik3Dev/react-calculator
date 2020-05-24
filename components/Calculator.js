@@ -98,7 +98,7 @@ export default function Calculator () {
 
         <div className="calc">
             <div className="calc-header">
-                <h2 className="title">Calculator</h2>
+                <h2 className="title">React Calculator</h2>
                 <Link href="/contact">
                     <a className="rounded-btn">More...</a>
                 </Link>
