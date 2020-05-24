@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Button from '../components/Button';
 import Display from '../components/Display';
 import {evaluate} from 'mathjs';
+import Link from 'next/link';
 
 export default function Home() {
     const [displayValue, setDisplayValue] = useState('');
@@ -61,6 +62,32 @@ export default function Home() {
         }
     }
 
+    const handleKeyUp = (e) => {
+        if(e.shiftKey && e.keyCode === 56) {
+            openParClickFn('(');
+        } else if(e.shiftKey && e.keyCode === 57) {
+            closeParClickFn(')');
+        } else if(e.keyCode >= 48 && e.keyCode <= 57) {
+            numPadClickFn(String.fromCharCode(e.keyCode));
+        } else if(e.keyCode === 8) {
+            backClickFn(String.fromCharCode(e.keyCode));
+        } else if(e.keyCode === 13) {
+            getResults(String.fromCharCode(e.keyCode));
+        } else if(e.keyCode === 67) {
+            clearClickFn(String.fromCharCode(e.keyCode));
+        } else if(['+', '-', '*', '/'].includes(e.key)) {
+            operClickFn(e.key);
+        } else if(e.keyCode === 190 || e.keyCode === 188) {
+            decClickFn('.');
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('keyup', handleKeyUp)
+
+        return (() => document.removeEventListener('keyup', handleKeyUp));
+    }), [];
+
     return (
         <div className="container">
             <Head>
@@ -68,7 +95,14 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+
             <div className="calc">
+                <div className="calc-header">
+                    <h2 className="title">Calculator</h2>
+                    <Link href="/contact">
+                        <a className="rounded-btn">More...</a>
+                    </Link>
+                </div>
                 <Display
                     value={displayValue}
                 />
