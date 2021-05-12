@@ -9,7 +9,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "mathjs": "^7.0.0",
+    "mathjs": "^7.5.1",
     "next": "9.4.2",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
